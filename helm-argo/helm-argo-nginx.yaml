@@ -1,0 +1,36 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: helm-declarative-nginx-app
+  namespace: argocd
+spec:
+  destination:
+    namespace: helm-nginx
+    server: https://kubernetes.default.svc 
+  project: default 
+  source:   
+    chart: nginx-laboratory
+    repoURL: https://raw.githubusercontent.com/gr0uch0dev/helm-carts-dispatcher/helm-nginx/helm-artifacts
+    targetRevision: 0.0.1
+  syncPolicy: 
+    automated:
+      prune: true
+      selfHeal: false
+    syncOptions:
+    - CreateNamespace=true
+
+---
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: argo-helm
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  name: argo
+  url: https://raw.githubusercontent.com/gr0uch0dev/helm-carts-dispatcher/helm-nginx/helm-artifacts
+  type: helm
+  username: ${USERNAME}
+  password: ${PA-TOKEN}
