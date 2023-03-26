@@ -4,6 +4,4 @@ apiVersion: v2
 version: 0.0.1
 appVersion: 0.0.1
 description: Nginx built from Helm for Laboratory
-home: https://gitlab.com/lu.cesarano/argocd-lab
-icon: https://e7.pngegg.com/pngimages/915/252/png-clipart-cartoon-television-laboratory-dexters-laboratory-free-purple-photography.png
-name: nginx-laboratory
+name: helm-nginx-laboratory

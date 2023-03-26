@@ -6,8 +6,6 @@ metadata:
 data:
   index.html: |
     <html>
-    <h1>Welcome</h1>
-    </br>
-    <h1>Welcome to ArgoLAB!</h1>
+    <h1>Welcome to our simple Lab! (brought by Helm) </h1>
     </html
 
