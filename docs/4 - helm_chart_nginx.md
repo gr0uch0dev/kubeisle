@@ -63,20 +63,24 @@ Now that the Chart configuration has been tested you can package it using `helm 
 
 Crate a `index.yaml` out of the `Chart` configuration in `helm-nginx`
 
-```
-helm repo index .
-```
 
-Move `index.yaml` in `helm-artifacts`
-
-```
-mv index.yaml ../helm-artifacts/.
-```
 
 Still in `helm-nginx` as working directory package the chart and store artifact in under `helm-artifacts` directory
 
 ```
 helm package . --destination ../helm-artifacts
+```
+
+Move in `helm-artifacts`
+
+```
+cd ../helm-artifacts
+```
+
+Create `index.yaml`
+
+```
+helm repo index .
 ```
 
 Check that the content of `helm-artifacts` is like the following
