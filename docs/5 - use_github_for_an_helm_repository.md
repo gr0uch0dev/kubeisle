@@ -51,4 +51,30 @@ Update the `helm` repos
 helm repo update
 ```
 
-helm-nginx-lab-test-from-github
+Search for the charts in the repo
+
+```
+helm search repo
+```
+
+Expect an output similar to the following
+
+```
+NAME                           	CHART VERSION	APP VERSION	DESCRIPTION                         
+myorg/helm-nginx-laboratory    	0.0.1        	0.0.1      	Nginx built from Helm for Laboratory
+```
+
+Install the `helm` chart from this repository
+
+```
+helm install helm-nginx-from-github myorg/helm-nginx-laboratory
+```
+
+Check that the service is running
+
+```
+$ kubectl get svc -n helm-nginx
+NAME            TYPE           CLUSTER-IP    EXTERNAL-IP      PORT(S)          AGE
+nginx-service   LoadBalancer   10.96.98.60   172.18.255.201   8080:30063/TCP   34s
+
+```
