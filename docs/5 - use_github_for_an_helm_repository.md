@@ -16,7 +16,39 @@ https://raw.githubusercontent.com/gr0uch0dev/k8s-helm-argocd/master/helm-artifac
 
 Where `<TOKEN_PROVIDED_BY_GITHUB>` is attached by Github when you click on `Raw` to get the raw content of the file hosted on Github.
 
+With this you can install the `helm` package by referencing the content on Github.
 
+Generate a personal access token on Github. This is needed to get the contents from the private repository where you host the helm packages.
 
+```
+Github User info -> Settings -> Developer Settings -> Personal Access Tokens (classic) -> Generate token by allowing only all the entries under the 'repo' section
+```
 
+To check that you are able to install the `helm` package also from Github, remove the one previously installed locally
 
+```
+helm uninstall helm-nginx-lab
+```
+
+Check the `service` resources under `helm-nginx` namespace
+
+```
+kubectl get svc -n helm-nginx
+```
+
+Make sure that the ones created before is no longer there (`No resources found in helm-nginx namespace.`)
+
+Install the `helm` repo from Github
+
+```sh
+helm repo add myorg --username <GITHUB_USERNAME> --password <GITHUB_PERSONAL_ACCESS_TOKEN> https://raw.githubusercontent.com/gr0uch0dev/k8s-helm-argocd/master/helm-artifacts/
+
+```
+
+Update the `helm` repos
+
+```
+helm repo update
+```
+
+helm-nginx-lab-test-from-github
