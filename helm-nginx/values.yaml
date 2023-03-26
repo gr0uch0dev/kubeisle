@@ -1,0 +1,15 @@
+metadata:
+  name: "nginx-deployment"
+  namespace: "nginx"
+
+deployments:
+  nginx:
+    replicas: 3
+    name: "nginx"
+    image: nginx:latest
+    ports:
+      containerPort: 80
+
+services:
+  nginxService:
+    name: "nginx-service"
