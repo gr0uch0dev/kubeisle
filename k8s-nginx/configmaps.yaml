@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: index-html-configmap
+  namespace: k8s-nginx
+data:
+  index.html: |
+    <html>
+    <h1>Welcome to our simple Lab!</h1>
+    </html
+
