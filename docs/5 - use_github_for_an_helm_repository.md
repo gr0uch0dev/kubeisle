@@ -12,7 +12,7 @@ We can use the `raw.githubusercontent` (`https://raw.githubusercontent.com`) to 
 
 For instance when pushed to Github you can get the content of `index.yaml` reaching an endpoint like the following
 
-https://raw.githubusercontent.com/gr0uch0dev/helm-carts-dispatcher/master/helm-artifacts/index.yaml?token=<TOKEN_PROVIDED_BY_GITHUB>
+https://raw.githubusercontent.com/gr0uch0dev/k8s-helm-argocd/master/helm-artifacts/index.yaml??token=<TOKEN_PROVIDED_BY_GITHUB>
 
 Where `<TOKEN_PROVIDED_BY_GITHUB>` is attached by Github when you click on `Raw` to get the raw content of the file hosted on Github.
 
