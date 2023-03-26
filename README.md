@@ -7,13 +7,11 @@ Kubernetes cluster up and running
 `kubectl` installed and configured to manage the above cluster
 
 
-
 ## Intro
 
 We start from a simple `nginx` application.
 
 Kubernetes manifests are stored  in `kubernetes-nginx`
-
 
 
 ## Kubernetes-nginx
