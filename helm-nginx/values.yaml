@@ -1,6 +1,6 @@
 metadata:
   name: "nginx-deployment"
-  namespace: "nginx"
+  namespace: "helm-nginx"
 
 deployments:
   nginx:
