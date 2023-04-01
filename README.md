@@ -36,3 +36,58 @@ We start from a simple `nginx` application.
 Kubernetes manifests are stored  in `kubernetes-nginx`
 
 
+## Sections
+
+### [1] Kubernetes
+
+Kubernetes 101 using `kind` (Kubernetes in Docker)
+
+Deploy a simple application that utilizes Kubernetes secrets specified in k8s manifests
+
+Helm
+
+### [2] Configuration
+
+Retrieve secrets from external sources
+
+### [3] Monitoring (Operational)
+
+Introduce monitoring workloads (e.g. `prometheus`)
+
+Use native `prometheus` web applications
+
+### [4] Hardening
+
+Evaluate attack surface of current setup and harden the configuration consequently
+
+RBAC via Istio
+
+Hardening clusters(least privilege) and workloads (secure images)
+
+### [5] Monitoring Security
+
+Introduce security logging and monitoring using agents like Filebeat. Forward logs to Elasticsearch cluster
+
+Evaluate EDR
+ 
+### [6] Log shipping
+
+Send all logs produced to a single source (Elasticsearch)
+
+### [7] Create Alerts
+
+Define use cases for security alerts in ELK stack covering known attack patterns
+
+### [8] CI/CD
+
+CI using Jenkins (build proper pipeline with SAST,DAST,container scanning using opensource tools)
+
+CD using ArgoCD
+
+
+### Malware Analysis and Honeypots
+
+To be defined
+
+
+
