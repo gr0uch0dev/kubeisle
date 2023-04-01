@@ -1,5 +1,9 @@
 # Ingress on Kind
 
+## Prerequisite
+
+The configuration in the `kind` lesson must be used.
+
 ## Introduction
 In the world of Kubernetes, the Nginx Ingress Controller is a popular tool for routing external traffic to your Kubernetes services. It acts as a gateway for incoming requests, allowing you to control traffic flow and apply routing rules based on the request's attributes.
 
@@ -10,6 +14,7 @@ By the end of this article, you will have a working Nginx Ingress Controller tha
 ## Install the Ingress Controller
 
 Let's start by deploying the Nginx Ingress Controller on the Kind cluster. This command downloads the necessary deployment YAML file from the official Nginx Ingress Controller repository on GitHub and applies it to the cluster. This command ensures that the Nginx Ingress Controller is running and ready to handle incoming requests.
+
 `kubectl apply --filename https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/kind/deploy.yaml` 
 
 The next command waits for the Nginx Ingress Controller pod to be ready. It monitors the status of the pod in the ingress-nginx namespace and waits for it to be ready, indicating that the Nginx Ingress Controller is fully deployed and functional.
