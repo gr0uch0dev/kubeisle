@@ -51,3 +51,4 @@ kubectl version --client
 ### Tips
 
 - Make sure the architecture of the computer matches both `kind` and `kubectl`. To get information about the machine's architecture, issue in the terminal `uname -i`
+- Todo: docker must run as privileged, otherwise the network will not be reachable by the host
