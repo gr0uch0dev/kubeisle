@@ -52,6 +52,7 @@ Security is always a concern when running Kubernetes, and this section covers ho
 - Evaluate attack surface of current setup and harden the configuration consequently
 - Service Mesh: Istio
 - Hardening clusters(least privilege) and workloads (secure images)
+- Expose your cluster safely over the Internet
 
 
 ### [5] Monitoring (Security)
