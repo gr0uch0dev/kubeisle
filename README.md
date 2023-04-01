@@ -2,92 +2,90 @@
 
 ## Intro
 
-Welcome to our GitHub laboratory, where we will cover the fundamentals of Kubernetes and demonstrate how to use some of the most popular tools in the Kubernetes ecosystem. In this laboratory, you will learn how to create a Kubernetes cluster using Kubernetes in Docker (kind), configure the cluster with the required resources, and deploy a simple nginx application using k8s manifests.
+Kubernetes is one of the most popular container orchestration systems in use today, enabling users to deploy, manage, and scale containerized applications in a highly efficient and scalable way. However, the complexity of Kubernetes can make it difficult for new users to get started and fully utilize all of its features.
 
-We will also show you how to package the nginx application into a Helm chart, which is a package manager for Kubernetes applications. Furthermore, we will demonstrate how to use GitHub to host a private Helm repository, where you can store your charts and deploy them to your Kubernetes cluster.
+This is where the Kubernetes Laboratory comes in. This repository contains a set of exercises and examples that cover various aspects of Kubernetes, from the basics of deployment and configuration to more advanced topics like security and monitoring. The laboratory provides a hands-on experience with Kubernetes, enabling users to learn by doing and gaining a deeper understanding of how Kubernetes works.
 
-To manage the deployment of applications and their configurations in Kubernetes, we will introduce ArgoCD, a popular continuous delivery tool for Kubernetes. You will learn how to deploy ArgoCD inside the Kubernetes cluster and use it to synchronize your application manifests and Helm charts with your Kubernetes cluster.
+The laboratory is designed to be accessible to users of all levels, whether you're just getting started with Kubernetes or you're an experienced user looking to expand your knowledge. Each section of the laboratory provides clear and concise instructions, along with sample code and configuration files, to help you get up and running quickly.
 
-By the end of this laboratory, you will have a better understanding of how to work with Kubernetes and its related tools, and be able to deploy applications on a Kubernetes cluster using best practices.
+By working through the exercises in this laboratory, you'll gain a solid foundation in Kubernetes and be able to confidently deploy and manage containerized applications in a variety of settings. Whether you're a developer, system administrator, or DevOps engineer, the skills you'll learn in this laboratory will be valuable in your work with Kubernetes and help you advance your career.
 
+## Disclaimer
 
-## Syllabus
+Please note that this laboratory is developed and tested on a Linux Fedora 6.2.7-200.fc37.x86_64. Therefore, some of the commands and settings may not be compatible with other operating systems such as Mac or Windows.
 
-[1] Create a cluster using Kubernetes in Docker (`kind`)
-
-[2] Configure the cluster with required resources
-
-[3] Deploy a simple `nginx` application using `k8s` manifests
-
-[4] Package the above `nginx` application into an helm chart
-
-[5] Use `Github` to host a private `Helm` repository
-
-[6] Deploy ArgoCD inside the cluster
-
-[7] Sync ArgoCD with application manifests at point [3]
-
-[8] Sync ArgoCD with helm repository hosted 
-
-## Repository structure
-
-We start from a simple `nginx` application.
-
-Kubernetes manifests are stored  in `kubernetes-nginx`
-
+Furthermore, we have used Kind as the Kubernetes engine, but other engines like Minikube or K3s can also be used. It is important to adapt the commands and configurations to fit your hardware and software setup accordingly.
 
 ## Sections
 
+The laboratory is divided into several sections, each of which focuses on a specific aspect of Kubernetes.
+
 ### [1] Kubernetes
 
-Kubernetes 101 using `kind` (Kubernetes in Docker)
+This section provides an introduction to Kubernetes, including how to set up a Kind cluster on a Linux machine, deploy a simple application using Kubernetes services, and use the Helm package manager. Additionally, this section covers how to implement a load balancer using MetalLB and an Ingress controller using Nginx.
 
-Deploy a simple application that utilizes Kubernetes secrets specified in k8s manifests
-
-Helm
+- Setup Kind cluster on a Linux Machine
+- Simple application: k8s-nginx
+- Package Manager: Helm
+- Kubernetes Services
+- Load Balancer: MetalLB
+- Ingress: Nginx Ingress Controller
 
 ### [2] Configuration
 
-Retrieve secrets from external sources
+In this section, you'll learn how to manage secrets in Kubernetes, including how to dynamically inject secrets into your application and use the Vault secret manager to securely store and manage your secrets.
+
+- Dynamic Secret Injection
+- Secret Manager: Vault
 
 ### [3] Monitoring (Operational)
 
-Introduce monitoring workloads (e.g. `prometheus`)
+Monitoring is a critical aspect of running Kubernetes in production, and this section covers the basics of monitoring with Prometheus and Alert Manager. You'll learn how to set up a Prometheus server, configure metrics scraping, and create alerts based on those metrics.
 
-Use native `prometheus` web applications
+- Prometheus
+- Alert Manager
 
 ### [4] Hardening
 
-Evaluate attack surface of current setup and harden the configuration consequently
+Security is always a concern when running Kubernetes, and this section covers how to evaluate the attack surface of your Kubernetes setup and harden the configuration accordingly. You'll also learn how to implement Istio service mesh to secure your microservices and secure your images to prevent unauthorized access.
 
-RBAC via Istio
+- Evaluate attack surface of current setup and harden the configuration consequently
+- Service Mesh: Istio
+- Hardening clusters(least privilege) and workloads (secure images)
 
-Hardening clusters(least privilege) and workloads (secure images)
 
-### [5] Monitoring Security
+### [5] Monitoring (Security)
 
-Introduce security logging and monitoring using agents like Filebeat. Forward logs to Elasticsearch cluster
+This section focuses on security monitoring, specifically how to use agents like Filebeat to collect security-related logs from your Kubernetes cluster and forward them to an Elasticsearch cluster. You'll also learn how to evaluate EDR (Endpoint Detection and Response) tools for detecting and responding to security incidents.
 
-Evaluate EDR
+- Introduce security logging and monitoring using agents like Filebeat. Forward logs to Elasticsearch cluster
+- Evaluate EDR
  
-### [6] Log shipping
+### [6] Routing Logs
 
-Send all logs produced to a single source (Elasticsearch)
+Centralized logging is essential for troubleshooting and analyzing application performance, and this section covers how to send all logs produced in your Kubernetes cluster to a single source, specifically Elasticsearch.
 
-### [7] Create Alerts
+- Send all logs produced to a single source (Elasticsearch)
 
-Define use cases for security alerts in ELK stack covering known attack patterns
+### [7] Alerting
+
+In this section, you'll learn how to define use cases for security alerts in ELK stack covering known attack patterns. This will help you detect and respond to security incidents quickly and effectively.
+
+- Define use cases for security alerts in ELK stack covering known attack patterns
 
 ### [8] CI/CD
 
-CI using Jenkins (build proper pipeline with SAST,DAST,container scanning using opensource tools)
+Continuous Integration and Continuous Delivery (CI/CD) is a critical aspect of modern software development, and this section covers how to implement a proper CI/CD pipeline using Jenkins, including SAST, DAST, and container scanning using open-source tools. You'll also learn how to implement CD using ArgoCD to deploy applications to your Kubernetes cluster.
 
-CD using ArgoCD
+- CI using Jenkins (build proper pipeline with SAST,DAST,container scanning using opensource tools)
+- CD using ArgoCD
 
 
 ### Malware Analysis and Honeypots
 
-To be defined
+This section is currently under development and will cover how to use Kubernetes for malware analysis and honeypots. Stay tuned for updates!
+
+- To be defined
 
 
 
