@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 9000 # the exposed port that the service hosts
+      targetPort: 80 # the port of the internal application
+  selector:
+    app: my-app
+
+# you can contact the service curling the external ip of the load balancer 
