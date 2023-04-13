@@ -9,5 +9,5 @@ spec:
   ports:
     - port: 6666 # the port exposed by the service internally
       targetPort: 80 # the port of the internal application
-      nodePort: 30008 # you can reach the port using the <node_ip>:30007
+      nodePort: 30008 # you can reach the port using the <node_ip>:30008
       
