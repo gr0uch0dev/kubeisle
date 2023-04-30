@@ -88,5 +88,30 @@ This section is currently under development and will cover how to use Kubernetes
 
 - To be defined
 
+## Coverage
+
+| Section | Article | Status | Link |
+| --- | --- | --- | --- | 
+| **Kubernetes 101** | 
+|  | Ingress | done | [link](01-kubernetes_101/ingress/README.md)
+|  | k8s-nginx
+|  | kind | done | [link](01-kubernetes_101/kind/README.md)
+|  | metallb | done | [link](01-kubernetes_101/metallb/README.md)
+|  | services | done | [link](01-kubernetes_101/services/README.md)
+|  | helm |
+| **Configuration** | |
+| **Operational Monitoring** | |
+|  | Enable Metrics in Docker | done | [link](03-operational_monitoring/docker-metrics/README.md)
+
+| **Hardening** | |
+| **Security Monitoring** | |
+| **Log Shippers** | |
+| **Security Alerting** | |
+| **CI/CD** | |
+
+
+
+
+
 
 
