@@ -1,4 +1,8 @@
-# README
+# Welcome to Kubeisle - a Comprehensive Kubernetes Laboratory
+
+## Who is it for?
+
+This laboratory is designed for anyone who wants to learn Kubernetes. It is especially useful for those who are new to Kubernetes and want to get started quickly. It is also useful for those who are already familiar with Kubernetes but want to learn more about its advanced features. SREs, DevOps engineers, System Administrators, and enthusiasts Software Engineers that wants to learn Kubernetes will find this laboratory useful.
 
 ## Intro
 
