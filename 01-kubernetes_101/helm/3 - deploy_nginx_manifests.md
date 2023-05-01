@@ -55,4 +55,4 @@ nginx-service   LoadBalancer   10.96.212.227   172.18.255.200   8080:31572/TCP  
 
 Connect to the external IP on port `8080` (e.g. http://172.18.255.200:8080)
 
-![welcome_k8s](../img/k8s-nginx/welcome_k8s.png)
+![welcome_k8s](.img/welcome_helm.png)

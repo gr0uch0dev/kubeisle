@@ -55,7 +55,7 @@ nginx-service   LoadBalancer   10.96.77.138   172.18.255.201   8080:31176/TCP   
 
 Check that the service is reachable (in our case is at http://172.18.255.201:8080/)
 
-![welcome_helm](../img/helm-nginx/welcome_helm.png)
+![welcome_helm](.img/welcome_helm.png)
 
 ## Package the chart via Chart Repository
 
