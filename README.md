@@ -102,7 +102,6 @@ This section is currently under development and will cover how to use Kubernetes
 | **Configuration** | |
 | **Operational Monitoring** | |
 |  | Enable Metrics in Docker | done | [link](03-operational_monitoring/docker-metrics/README.md)
-
 | **Hardening** | |
 | **Security Monitoring** | |
 | **Log Shippers** | |
