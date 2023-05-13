@@ -1,4 +1,4 @@
-# [4] Package simple `nginx` application into an helm chart
+# Write a Helm Chart for Nginx
 
 ## What is Helm?
 Helm is a tool to package, deploy, and manage Kubernetes applications. Helm helps you manage Kubernetes applications — Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.
