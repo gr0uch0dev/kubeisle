@@ -98,7 +98,7 @@ This section is currently under development and will cover how to use Kubernetes
 | --- | --- | --- | --- | 
 | **Kubernetes 101** | 
 |  | Ingress | done | [link](01-kubernetes_101/ingress/README.md)
-|  | k8s-nginx
+|  | k8s-nginx | done | [link](01-kubernetes_101/k8s-nginx/README.md)
 |  | kind | done | [link](01-kubernetes_101/kind/README.md)
 |  | metallb | done | [link](01-kubernetes_101/metallb/README.md)
 |  | services | done | [link](01-kubernetes_101/services/README.md)

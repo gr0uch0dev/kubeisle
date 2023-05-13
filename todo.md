@@ -1,3 +1,0 @@
-- Copyright
-- Github Page
-- Change Name of Repository

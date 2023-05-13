@@ -4,10 +4,11 @@ metadata:
   name: nginx-service
   namespace: k8s-nginx
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
     - port: 8080
       targetPort: 80
+      nodePort: 30080
   selector:
     app: nginx
 
