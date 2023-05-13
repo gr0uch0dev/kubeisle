@@ -104,7 +104,7 @@ This section is currently under development and will cover how to use Kubernetes
 |                            |            | services                 | done   | [link](01-kubernetes_101/services/README.md)               |
 |                            | helm       | nginx                    | done   | [link](01-kubernetes_101/helm/helm-nginx/README.md)        |
 |                            | helm       | package nginx into chart | done   | [link](01-kubernetes_101/helm/helm-package/README.md)      |
-|                            | helm       | create helm repository   |        |                                                            |
+|                            | helm       | create helm repository   | done   | [link](01-kubernetes_101/helm/helm-repository/README.md)   |
 | **Configuration**          |            |                          |        |                                                            |
 | **Operational Monitoring** |            |                          |        |                                                            |
 |                            |            | Enable Metrics in Docker | done   | [link](03-operational_monitoring/docker-metrics/README.md) |
