@@ -8,7 +8,11 @@ A Helm repository is useful in the context of a CI/CD pipeline. The CI/CD pipeli
 
 ## Using Github Pages as Helm Repository
 
-It is possible to use Github Pages as Helm repository. The only requirement is to have a `index.html` file and the chart tarballs in the repository. The `index.html` file can be created using `helm repo index` command. The tarball used in this example is the one created in the previous lab.
+It is possible to use the `raw.githubusercontent` (`https://raw.githubusercontent.com`) to act as a webserver.
+
+`https://raw.githubusercontent.com/gr0uch0dev/{REPO}/master/helm-artifacts/index.yaml??token=<TOKEN_PROVIDED_BY_GITHUB>`
+
+This is how it is possible to use Github Pages as Helm repository. The only requirement is to have a `index.html` file and the chart tarballs in the repository. The `index.html` file can be created using `helm repo index` command. The tarball used in this example is the one created in the previous lab.
 
 Let's create and push the `index.html` file to the repository.
 
@@ -26,10 +30,19 @@ git push
 
 Once setup, the repository can added and used to install the chart.
 
+### Generate the access token
+Generate a personal access token on Github. This is needed to get the contents from the private repository where you host the helm packages.
+
+```
+Github User info -> Settings -> Developer Settings -> Personal Access Tokens (classic) -> Generate token by allowing only all the entries under the 'repo' section
+```
+
+## Add the repository and install the chart
+
 To add the repository:
 
 ```bash
-helm repo add helm-nginx {github-pages-url}
+helm repo add myorg --username <GITHUB_USERNAME> --password <GITHUB_PERSONAL_ACCESS_TOKEN> https://raw.githubusercontent.com/gr0uch0dev/{REPO}/master/helm-artifacts/
 ```
 
 To install the chart:
