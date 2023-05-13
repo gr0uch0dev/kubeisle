@@ -199,3 +199,4 @@ If you get
     then everything is working as expected.
 
 Congratulations! You have successfully released a simple nginx web server on Kubernetes with a custom webpage.
+ 
